@@ -5,36 +5,22 @@ module.exports = {
     return [
       {
         name: 'name',
-        message: 'What is the name of the new project',
+        message: 'Project name.',
         default: this.outFolder,
         filter: val => val.toLowerCase()
       },
       {
         name: 'description',
-        message: 'How would you descripe the new project',
+        message: 'Project description',
         default: `my ${superb()} project`
       },
       {
-        name: 'username',
-        message: 'What is your GitHub username',
-        default: this.gitUser.username || this.gitUser.name,
-        filter: val => val.toLowerCase(),
+        name: 'author',
+        type: 'string',
+        message: 'Author name',
+        default: '{gitUser.name}',
         store: true
       },
-      {
-        name: 'email',
-        message: 'What is your email?',
-        default: this.gitUser.email,
-        store: true
-      },
-      {
-        name: 'website',
-        message: 'The URL of your website',
-        default({ username }) {
-          return `github.com/${username}`
-        },
-        store: true
-      }
     ]
   },
   actions: [
