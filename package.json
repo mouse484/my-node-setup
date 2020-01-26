@@ -1,0 +1,25 @@
+{
+  "name": "sao-my-node-setup",
+  "version": "0.0.0",
+  "description": "my praiseworthy SAO generator",
+  "repository": {
+    "url": "mouse_484/sao-my-node-setup",
+    "type": "git"
+  },
+  "author": "mouse_484 <escmouse484@gmail.com> (github.com/mouse_484)",
+  "license": "MIT",
+  "files": [
+    "saofile.js",
+    "template"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "superb": "^1.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "sao": "^1.0.0"
+  }
+}
