@@ -35,6 +35,7 @@ module.exports = {
       type: 'add',
       files: '**',
       filters: {
+        '_.eslintrc.js': '!eslint',
         '.prettierrc': '!prettier'
       }
     },
@@ -42,7 +43,8 @@ module.exports = {
       type: 'move',
       patterns: {
         gitignore: '.gitignore',
-        'package_json': 'package.json'
+        'package_json': 'package.json',
+        '_.eslintrc.js': '.eslintrc.js',
       }
     }
   ],
