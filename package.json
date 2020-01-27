@@ -13,7 +13,8 @@
     "template"
   ],
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "dev": "rm -r dev && sao . dev"
   },
   "dependencies": {
     "superb": "^1.3.0"
