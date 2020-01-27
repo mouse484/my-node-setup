@@ -27,6 +27,11 @@ module.exports = {
       {
         name: 'prettier',
         type: 'confirm',
+      },
+      {
+        name: 'typescript',
+        type: 'confirm',
+        default: false,
       }
     ]
   },
@@ -35,8 +40,9 @@ module.exports = {
       type: 'add',
       files: '**',
       filters: {
-        '_.eslintrc.js': 'eslint',
-        '.prettierrc': 'prettier'
+        '.eslintrc_js': 'eslint',
+        '.prettierrc': 'prettier',
+        'tsconfig_json': 'typescript'
       }
     },
     {
@@ -44,7 +50,8 @@ module.exports = {
       patterns: {
         gitignore: '.gitignore',
         'package_json': 'package.json',
-        '_.eslintrc.js': '.eslintrc.js',
+        '.eslintrc_js': '.eslintrc.js',
+        'tsconfig_json': 'tsconfig.json'
       }
     }
   ],
