@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'mouse'
+    'mouse',
     <%_ if (prettier) { _%>
     'mouse/prettier'
     <%_ } _%>

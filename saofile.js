@@ -35,8 +35,8 @@ module.exports = {
       type: 'add',
       files: '**',
       filters: {
-        '_.eslintrc.js': '!eslint',
-        '.prettierrc': '!prettier'
+        '_.eslintrc.js': 'eslint',
+        '.prettierrc': 'prettier'
       }
     },
     {
