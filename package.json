@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "ava",
-    "dev": "rm -r dev && sao . dev"
+    "dev": "rm -r -f dev && sao . dev"
   },
   "dependencies": {
     "superb": "^1.3.0"

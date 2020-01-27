@@ -7,7 +7,7 @@ module.exports = {
         name: 'name',
         message: 'Project name.',
         default: this.outFolder,
-        filter: val => val.toLowerCase()
+        filter: val => val.toLowerCase(),
       },
       {
         name: 'description',
@@ -19,11 +19,14 @@ module.exports = {
         type: 'string',
         message: 'Author name',
         default: '{gitUser.name}',
-        store: true
+      },
+      {
+        name: 'eslint',
+        type: 'confirm',
       },
       {
         name: 'prettier',
-        type: 'confirm'
+        type: 'confirm',
       }
     ]
   },
@@ -38,7 +41,8 @@ module.exports = {
     {
       type: 'move',
       patterns: {
-        gitignore: '.gitignore'
+        gitignore: '.gitignore',
+        'package_json': 'package.json'
       }
     }
   ],
