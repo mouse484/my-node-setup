@@ -21,12 +21,19 @@ module.exports = {
         default: '{gitUser.name}',
         store: true
       },
+      {
+        name: 'prettier',
+        type: 'confirm'
+      }
     ]
   },
   actions: [
     {
       type: 'add',
-      files: '**'
+      files: '**',
+      filters: {
+        '.prettierrc': '!prettier'
+      }
     },
     {
       type: 'move',
