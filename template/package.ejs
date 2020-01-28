@@ -4,11 +4,10 @@
   "description": "<%= description %>",
   "scripts": {
     <%_ if (type === 'node') { _%>
-    <%_ if (typescript) { _%>
-    "dev": "nodemon --watch src --ext ts --exec ts-node index.ts",
-    <%_ } else { _%>
-    "dev": "nodemon --watch src index.js",
-    <%_ } _%>
+    <% let option = '' %>
+    <% if (typescript) option += ' --ext ts --exec ts-node' %>
+    <% if (dotenv) option += ' --require dotenv/config' %>
+    "dev": "nodemon --watch src<%= option %> index",
     <%_ } _%>
     <%_ if (eslint) { _%>
     "lint": "eslint .",
@@ -38,9 +37,12 @@
     "@types/node": "^13.5.0",
     "ts-node": "^8.6.2",
     <%_ } _%>
-    <%_ if (typescript && eslint){ _%>
+    <%_ if (typescript && eslint) { _%>
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
+    <%_ } _%>
+    <%_ if (dotenv) { _%>
+    "dotenv": "^8.2.0",
     <%_ } _%>
     "": ""
   }

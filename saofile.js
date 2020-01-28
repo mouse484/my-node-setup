@@ -41,6 +41,11 @@ module.exports = {
         name: 'typescript',
         type: 'confirm',
         default: false,
+      },
+      {
+        name: 'dotenv',
+        type: 'confirm',
+        default: false,
       }
     ]
   },
@@ -51,7 +56,8 @@ module.exports = {
       filters: {
         '.eslintrc.ejs': 'eslint',
         '.prettierrc': 'prettier',
-        'tsconfig.ejs': 'typescript'
+        'tsconfig.ejs': 'typescript',
+        '.env': 'dotenv',
       }
     },
     {
