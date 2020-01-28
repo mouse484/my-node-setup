@@ -3,9 +3,11 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "target": "es2020",
+    <%_ if(type === 'node') { _%>
     "module": "commonjs",
     "esModuleInterop": true,
     "moduleResolution": "node",
+    <%_ } _%>
     "strict": true,
     "declaration": true,
     "declarationDir": "dist/type"
