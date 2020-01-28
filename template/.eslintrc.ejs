@@ -2,19 +2,19 @@ module.exports = {
   extends: [
     'mouse',
     <%_ if(type === 'node') { _%>
-    'mouse/node'
+    'mouse/node',
     <%_ } _%>
     <%_ if(type === 'browser') { _%>
-    'mouse/browser'
+    'mouse/browser',
     <%_ } _%>
     <%_ if(typescript) { _%>
-    'mouse/typescript'
+    'mouse/typescript',
     <%_ } _%>
     <%_ if (prettier) { _%>
-    'mouse/prettier'
+    'mouse/prettier',
     <%_ } _%>
     <%_ if(typescript && prettier) { _%>
-    'mouse/typescript-prettier'
+    'mouse/typescript-prettier',
     <%_ } _%>
-  ],
+  ]
 };
