@@ -1,3 +1,8 @@
 tasks:
   - init: yarn install
     command: yarn run dev
+
+vscode:
+  extensions:
+    - DigitalBrainstem.javascript-ejs-support@1.2.1:xDE8Xqn8aLJyYLVuUOX/Hw==
+    - QassimFarid.ejs-language-support@0.0.1:w4TbdGAviNNiyP8nOqfKrg==

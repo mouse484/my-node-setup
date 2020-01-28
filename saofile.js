@@ -21,6 +21,15 @@ module.exports = {
         default: '{gitUser.name}',
       },
       {
+        name: 'type',
+        message: 'Select development type',
+        type: 'list',
+        choices: [
+          { name: 'Node.js', value: 'node' },
+          'browser'
+        ],
+      },
+      {
         name: 'eslint',
         type: 'confirm',
       },
@@ -40,18 +49,18 @@ module.exports = {
       type: 'add',
       files: '**',
       filters: {
-        '.eslintrc_js': 'eslint',
+        '.eslintrc.ejs': 'eslint',
         '.prettierrc': 'prettier',
-        'tsconfig_json': 'typescript'
+        'tsconfig.ejs': 'typescript'
       }
     },
     {
       type: 'move',
       patterns: {
         gitignore: '.gitignore',
-        'package_json': 'package.json',
-        '.eslintrc_js': '.eslintrc.js',
-        'tsconfig_json': 'tsconfig.json'
+        'package.ejs': 'package.json',
+        '.eslintrc.ejs': '.eslintrc.js',
+        'tsconfig.ejs': 'tsconfig.json'
       }
     }
   ],

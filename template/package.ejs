@@ -16,7 +16,15 @@
     <%_ if (prettier) { _%>
     "prettier": "^1.19.1",
     "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2"
+    "eslint-plugin-prettier": "^3.1.2",
     <%_ } _%>
+    <%_ if (typescript) { _%>
+    "typescript": "^3.7.5",
+    <%_ } _%>
+    <%_ if (typescript && type === 'node') { _%>
+    "ts-node": "^8.6.2",
+    <%_ } _%>
+    "": ""
   }
 }
+
