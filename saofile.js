@@ -62,6 +62,15 @@ module.exports = {
         '.eslintrc.ejs': '.eslintrc.js',
         'tsconfig.ejs': 'tsconfig.json'
       }
+    },
+    {
+      type: 'modify',
+      files: 'package.json',
+      handler(data) {
+        delete data.scripts['']
+        delete data.devDependencies['']
+        return data
+      }
     }
   ],
   async completed() {

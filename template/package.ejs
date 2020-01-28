@@ -3,10 +3,18 @@
   "version": "0.0.0",
   "description": "<%= description %>",
   "scripts": {
+    <%_ if (type === 'node') { _%>
+    <%_ if (typescript) { _%>
+    "dev": "nodemon --watch src --ext ts --exec ts-node index.ts",
+    <%_ } else { _%>
+    "dev": "nodemon --watch src index.js",
+    <%_ } _%>
+    <%_ } _%>
     <%_ if (eslint) { _%>
     "lint": "eslint .",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
     <%_ } _%>
+    "":""
   },
   "devDependencies": {
     <%_ if (eslint) { _%>
@@ -19,6 +27,9 @@
     <%_ if (eslint && prettier){ _%>
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
+    <%_ } _%>
+    <%_ if (type === 'node') { _%>
+    "nodemon": "^2.0.2",
     <%_ } _%>
     <%_ if (typescript) { _%>
     "typescript": "^3.7.5",
