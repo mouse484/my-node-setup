@@ -22,9 +22,15 @@
     "typescript": "^3.7.5",
     <%_ } _%>
     <%_ if (typescript && type === 'node') { _%>
+    "@types/node": "^13.5.0",
     "ts-node": "^8.6.2",
+    <%_ } _%>
+    <%_ if (typescript && eslint){ _%>
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     <%_ } _%>
     "": ""
   }
 }
+
 
