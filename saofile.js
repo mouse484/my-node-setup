@@ -1,4 +1,4 @@
-const superb = require('superb')
+const superb = require("superb").random
 
 module.exports = {
   prompts() {
