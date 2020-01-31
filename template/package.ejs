@@ -17,32 +17,32 @@
   },
   "devDependencies": {
     <%_ if (eslint) { _%>
-    "eslint": "^6.8.0",
+    "eslint": "<%= package.devDependencies.eslint %>",
     "eslint-config-mouse": "mouse484/eslint-config",
     <%_ } _%>
     <%_ if (prettier) { _%>
-    "prettier": "^1.19.1",
+    "prettier": "<%= package.devDependencies.prettier %>",
     <%_ } _%>
     <%_ if (eslint && prettier){ _%>
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-config-prettier": "<%= package.devDependencies['eslint-config-prettier'] %>",
+    "eslint-plugin-prettier": "<%= package.devDependencies['eslint-plugin-prettier'] %>",
     <%_ } _%>
     <%_ if (type === 'node') { _%>
-    "nodemon": "^2.0.2",
+    "nodemon": "<%= package.devDependencies.nodemon %>",
     <%_ } _%>
     <%_ if (typescript) { _%>
-    "typescript": "^3.7.5",
+    "typescript": "<%= package.devDependencies.typescript %>",
     <%_ } _%>
     <%_ if (typescript && type === 'node') { _%>
-    "@types/node": "^13.5.0",
-    "ts-node": "^8.6.2",
+    "@types/node": "<%= package.devDependencies['@types/node'] %>",
+    "ts-node": "<%= package.devDependencies['ts-node'] %>",
     <%_ } _%>
     <%_ if (typescript && eslint) { _%>
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
+    "@typescript-eslint/eslint-plugin": "<%= package.devDependencies['@typescript-eslint/eslint-plugin'] %>",
+    "@typescript-eslint/parser": "<%= package.devDependencies['@typescript-eslint/parser'] %>",
     <%_ } _%>
     <%_ if (dotenv) { _%>
-    "dotenv": "^8.2.0",
+    "dotenv": "<%= package.devDependencies.dotenv %>",
     <%_ } _%>
     "": ""
   }

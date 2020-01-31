@@ -49,6 +49,9 @@ module.exports = {
       }
     ]
   },
+  templateData: {
+    package: require("./lib/package.json")
+  },
   actions: [
     {
       type: 'add',
