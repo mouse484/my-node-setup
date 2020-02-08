@@ -1,51 +1,58 @@
 {
-  "name": "<%= name %>",
-  "version": "0.0.0",
-  "description": "<%= description %>",
-  "scripts": {
-    <%_ if (type === 'node') { _%>
-    <% let option = '' %>
-    <% if (typescript) option += ' --ext ts --exec ts-node' %>
-    <% if (dotenv) option += ' --require dotenv/config' %>
-    "dev": "nodemon --watch src<%= option %> index",
-    <%_ } _%>
-    <%_ if (eslint) { _%>
-    "lint": "eslint .",
-    "fix": "eslint --fix .",
-    <%_ } _%>
-    "":""
-  },
-  "devDependencies": {
-    <%_ if (eslint) { _%>
-    "eslint": "<%= package.devDependencies.eslint %>",
-    "eslint-config-mouse": "mouse484/eslint-config",
-    <%_ } _%>
-    <%_ if (prettier) { _%>
-    "prettier": "<%= package.devDependencies.prettier %>",
-    <%_ } _%>
-    <%_ if (eslint && prettier){ _%>
-    "eslint-config-prettier": "<%= package.devDependencies['eslint-config-prettier'] %>",
-    "eslint-plugin-prettier": "<%= package.devDependencies['eslint-plugin-prettier'] %>",
-    <%_ } _%>
-    <%_ if (type === 'node') { _%>
-    "nodemon": "<%= package.devDependencies.nodemon %>",
-    <%_ } _%>
-    <%_ if (typescript) { _%>
-    "typescript": "<%= package.devDependencies.typescript %>",
-    <%_ } _%>
-    <%_ if (typescript && type === 'node') { _%>
-    "@types/node": "<%= package.devDependencies['@types/node'] %>",
-    "ts-node": "<%= package.devDependencies['ts-node'] %>",
-    <%_ } _%>
-    <%_ if (typescript && eslint) { _%>
-    "@typescript-eslint/eslint-plugin": "<%= package.devDependencies['@typescript-eslint/eslint-plugin'] %>",
-    "@typescript-eslint/parser": "<%= package.devDependencies['@typescript-eslint/parser'] %>",
-    <%_ } _%>
-    <%_ if (dotenv) { _%>
-    "dotenv": "<%= package.devDependencies.dotenv %>",
-    <%_ } _%>
-    "": ""
-  }
+"name": "<%= name %>",
+"version": "0.0.0",
+"description": "<%= description %>",
+"scripts": {
+<%_ if (type === 'node') { _%>
+<% let option = '' %>
+<% if (typescript) option += ' --ext ts --exec ts-node' %>
+<% if (dotenv) option += ' --require dotenv/config' %>
+"dev": "nodemon --watch src<%= option %> index",
+<%_ } _%>
+<%_ if (eslint) { _%>
+"lint": "eslint .",
+"fix": "eslint --fix ."
+},
+<% const ext = ["js"] %>
+<% if (typescript) ext.push("ts") %>
+"lint-staged": {
+"*.{<%= ext.join(",") %>}": "eslint"
+},
+"husky": {
+"hooks": {
+"pre-commit": "lint-staged"
 }
-
-
+},
+<%_ } _%>
+"devDependencies": {
+<%_ if (eslint) { _%>
+"eslint": "<%= package.devDependencies.eslint %>",
+"eslint-config-mouse": "mouse484/eslint-config",
+<%_ } _%>
+<%_ if (prettier) { _%>
+"prettier": "<%= package.devDependencies.prettier %>",
+<%_ } _%>
+<%_ if (eslint && prettier){ _%>
+"eslint-config-prettier": "<%= package.devDependencies['eslint-config-prettier'] %>",
+"eslint-plugin-prettier": "<%= package.devDependencies['eslint-plugin-prettier'] %>",
+<%_ } _%>
+<%_ if (type === 'node') { _%>
+"nodemon": "<%= package.devDependencies.nodemon %>",
+<%_ } _%>
+<%_ if (typescript) { _%>
+"typescript": "<%= package.devDependencies.typescript %>",
+<%_ } _%>
+<%_ if (typescript && type === 'node') { _%>
+"@types/node": "<%= package.devDependencies['@types/node'] %>",
+"ts-node": "<%= package.devDependencies['ts-node'] %>",
+<%_ } _%>
+<%_ if (typescript && eslint) { _%>
+"@typescript-eslint/eslint-plugin": "<%= package.devDependencies['@typescript-eslint/eslint-plugin'] %>",
+"@typescript-eslint/parser": "<%= package.devDependencies['@typescript-eslint/parser'] %>",
+<%_ } _%>
+<%_ if (dotenv) { _%>
+"dotenv": "<%= package.devDependencies.dotenv %>",
+<%_ } _%>
+"": ""
+}
+}
