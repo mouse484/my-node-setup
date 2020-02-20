@@ -1,1 +1,4 @@
 node_modules
+<%_ if (dotenv) { _%>
+.env
+<%_ } _%>
