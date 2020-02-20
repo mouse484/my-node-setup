@@ -10,8 +10,10 @@
 "dev": "nodemon --watch src<%= option %> src/index",
 <%_ } _%>
 <%_ if (eslint) { _%>
-"lint": "eslint .",
-"fix": "eslint --fix ."
+<% let option = '' %>
+<% if (typescript) option = ' --ext ts' %>
+"lint": "eslint<%= option %> .",
+"fix": "eslint<%= option %> --fix ."
 },
 <% const ext = ["js"] %>
 <% if (typescript) ext.push("ts") %>
@@ -56,3 +58,4 @@
 "": ""
 }
 }
+
