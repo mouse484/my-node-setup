@@ -7,7 +7,7 @@
 <% let option = '' %>
 <% if (typescript) option += ' --ext ts --exec ts-node' %>
 <% if (dotenv) option += ' --require dotenv/config' %>
-"dev": "nodemon --watch src<%= option %> index",
+"dev": "nodemon --watch src<%= option %> src/index",
 <%_ } _%>
 <%_ if (eslint) { _%>
 "lint": "eslint .",
