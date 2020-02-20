@@ -1,27 +1,12 @@
-# sao-my-node-setup
-
-> my praiseworthy SAO generator
+# my-node-setup
 
 ## Usage
-
-Install [SAO](https://github.com/saojs/sao) first.
-
 ```bash
-yarn global add sao
-# or
-npm i -g sao
+yarn add -D sao
 ```
 
-### From npm
-
 ```bash
-sao my-node-setup my-project
-```
-
-### From git
-
-```bash
-sao mouse_484/sao-my-node-setup my-project
+yarn run sao mouse484/my-node-setup
 ```
 
 ## License
