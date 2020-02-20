@@ -418,6 +418,11 @@ configstore@^3.0.0:
     write-file-atomic "^2.0.0"
     xdg-basedir "^3.0.0"
 
+confusing-browser-globals@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.9.tgz#72bc13b483c0276801681871d4898516f8f54fdd"
+  integrity sha512-KbS1Y0jMtyPgIxjO7ZzMAuUpAKMt1SzCL9fsrKsX6b0zJPTaT0SiSPmewwVZg9UAO83HVIlEhZF84LIjZ0lmAw==
+
 cosmiconfig@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz#da4fee853c52f6b1e6935f41c1a2fc50bd4a9982"
@@ -576,8 +581,10 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
 
 eslint-config-mouse@mouse484/eslint-config:
   version "1.0.0"
-  uid a58d389aaa6cd355155016f54631d1394685126e
-  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/a58d389aaa6cd355155016f54631d1394685126e"
+  uid "5723301b2093a50d8ba9bea1d87c6e82c84fddfb"
+  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/5723301b2093a50d8ba9bea1d87c6e82c84fddfb"
+  dependencies:
+    confusing-browser-globals "^1.0.9"
 
 eslint-config-prettier@^6.9.0:
   version "6.10.0"
