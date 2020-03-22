@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "ava": "^3.5.0",
+    "eslint-config-mouse": "mouse484/eslint-config",
     "sao": "^1.0.0"
   }
 }

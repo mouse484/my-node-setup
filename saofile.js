@@ -1,4 +1,4 @@
-const superb = require("superb").random
+const superb = require('superb').random
 
 module.exports = {
   prompts() {
@@ -50,7 +50,8 @@ module.exports = {
     ]
   },
   templateData: {
-    package: require("./lib/package.json")
+    package: require('./lib/package.json'),
+    prettier: require('eslint-config-mouse/prettier').prettier
   },
   actions: [
     {
