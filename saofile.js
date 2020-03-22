@@ -1,4 +1,7 @@
 const superb = require('superb').random
+const package = require('./lib/package.json')
+const prettier = require("prettier")
+const prettier_rules = require("eslint-config-mouse/prettier").prettier
 
 module.exports = {
   prompts() {
@@ -50,8 +53,8 @@ module.exports = {
     ]
   },
   templateData: {
-    package: require('./lib/package.json'),
-    prettier: require('eslint-config-mouse/prettier').prettier
+    package,
+    prettier: prettier.format(JSON.stringify(prettier_rules), { parser: 'json', ...prettier_rules })
   },
   actions: [
     {

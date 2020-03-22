@@ -17,11 +17,12 @@
     "dev": "rm -r -f dev && sao . dev"
   },
   "dependencies": {
+    "eslint-config-mouse": "mouse484/eslint-config",
+    "prettier": "^2.0.1",
     "superb": "^4.0.0"
   },
   "devDependencies": {
     "ava": "^3.5.0",
-    "eslint-config-mouse": "mouse484/eslint-config",
     "sao": "^1.0.0"
   }
 }

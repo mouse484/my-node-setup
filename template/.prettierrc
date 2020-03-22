@@ -1,1 +1,1 @@
-<%- JSON.stringify(prettier) %>
+<%- prettier %>
