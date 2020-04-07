@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "eslint-config-mouse": "mouse484/eslint-config",
-    "prettier": "^2.0.3",
+    "prettier": "^2.0.4",
     "superb": "^4.0.0"
   },
   "devDependencies": {
