@@ -613,8 +613,8 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
 
 eslint-config-mouse@mouse484/eslint-config:
   version "1.0.0"
-  uid "0da8a04c70fec9e7b088ddab813ccf35163d62b3"
-  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/0da8a04c70fec9e7b088ddab813ccf35163d62b3"
+  uid "46fbd4a2fa63647065320b55c5c28a6f149482f4"
+  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/46fbd4a2fa63647065320b55c5c28a6f149482f4"
   dependencies:
     confusing-browser-globals "^1.0.9"
 
