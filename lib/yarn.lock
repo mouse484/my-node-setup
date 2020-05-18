@@ -614,8 +614,8 @@ escape-string-regexp@^1.0.5:
 
 eslint-config-mouse@mouse484/eslint-config:
   version "1.0.0"
-  uid c95c6d7437028cede34da35d04b0e3e54f212c69
-  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/c95c6d7437028cede34da35d04b0e3e54f212c69"
+  uid "61a77dbccce4df4345bba6ec739c029b6aa67cf9"
+  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/61a77dbccce4df4345bba6ec739c029b6aa67cf9"
   dependencies:
     confusing-browser-globals "^1.0.9"
 
