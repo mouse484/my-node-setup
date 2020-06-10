@@ -2,3 +2,6 @@ node_modules
 <%_ if (dotenv) { _%>
 .env
 <%_ } _%>
+<%_ if (typescript) { _%>
+dist/
+<%_ } _%>
