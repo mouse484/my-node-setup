@@ -23,6 +23,6 @@
   },
   "devDependencies": {
     "ava": "^3.10.1",
-    "sao": "^1.7.1"
+    "sao": "1.7.2-canary.145.30b2bdb.0"
   }
 }
