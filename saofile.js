@@ -1,7 +1,7 @@
 const superb = require("superb").random;
 const package = require("./lib/package.json");
 const prettier = require("prettier");
-const prettier_rules = require("eslint-config-mouse/.prettierrc");
+const prettier_rules = require("@mouse_484/eslint-config-prettier/.prettierrc");
 
 module.exports = {
   prompts() {

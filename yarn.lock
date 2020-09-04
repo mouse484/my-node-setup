@@ -38,6 +38,10 @@
   dependencies:
     arrify "^1.0.1"
 
+"@mouse_484/eslint-config-prettier@https://eslint-config.mouse484.tk/Prettier?next":
+  version "0.0.0"
+  resolved "https://eslint-config.mouse484.tk/Prettier?next#95c5d0424165e6417f619ea90b066181b7b2d5ca"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -795,11 +799,6 @@ configstore@^5.0.1:
     write-file-atomic "^3.0.0"
     xdg-basedir "^4.0.0"
 
-confusing-browser-globals@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.9.tgz#72bc13b483c0276801681871d4898516f8f54fdd"
-  integrity sha512-KbS1Y0jMtyPgIxjO7ZzMAuUpAKMt1SzCL9fsrKsX6b0zJPTaT0SiSPmewwVZg9UAO83HVIlEhZF84LIjZ0lmAw==
-
 convert-source-map@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
@@ -1133,13 +1132,6 @@ escape-string-regexp@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
-
-eslint-config-mouse@mouse484/eslint-config:
-  version "1.0.0"
-  uid "6c9f91182d1e126ec8da2556abeae3222c6ead27"
-  resolved "https://codeload.github.com/mouse484/eslint-config/tar.gz/6c9f91182d1e126ec8da2556abeae3222c6ead27"
-  dependencies:
-    confusing-browser-globals "^1.0.9"
 
 esprima@^4.0.0:
   version "4.0.1"
